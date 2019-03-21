@@ -3,7 +3,7 @@ from elftools.elf.elffile import ELFFile
 from elftools.elf.relocation import RelocationSection
 
 print("CREATED BY JOAS")
-with open('./chall.elf', 'rb') as f:
+with open('./chall.elf', 'rb') as f: #change the file name to what you are performing reverse engineering
     e = ELFFile(f)
     for section in e.iter_sections():
         if isinstance(section, RelocationSection):
