@@ -2,7 +2,7 @@ from elftools.elf.elffile import ELFFile
 from capstone import *
 
 print("JOAS ANTONIO")
-with open('./chall.elf', 'rb') as f:
+with open('./chall.elf', 'rb') as f:   #change the file name to what you are performing reverse engineering
     elf = ELFFile(f)
     code = elf.get_section_by_name('.text')
     ops = code.data()                 # returns a bytestring with the opcodes
